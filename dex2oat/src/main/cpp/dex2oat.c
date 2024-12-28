@@ -108,7 +108,7 @@ int main(int argc, char **argv) {
     close(sock_fd);
     LOGD("sock: %s %d", sock.sun_path + 1, stock_fd);
 
-    const char *new_argv[argc + 2];
+    const char *new_argv[argc + 3];
     for (int i = 0; i < argc; i++) new_argv[i] = argv[i];
     new_argv[argc] = "--inline-max-code-units=0";
     new_argv[argc + 1] = "--avoid-storing-invocation";
